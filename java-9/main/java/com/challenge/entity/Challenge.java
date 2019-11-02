@@ -1,0 +1,48 @@
+package com.challenge.entity;
+
+import lombok.*;
+import org.springframework.data.annotation.CreatedDate;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
+@Entity
+@Table(name = "challenge")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+@EqualsAndHashCode(callSuper = false, of = "id")
+@EntityListeners(Challenge.class)
+public class Challenge implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
+    private Integer id;
+
+    @OneToMany(mappedBy = "challenge", targetEntity = Acceleration.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Acceleration> accelerations;
+
+    @OneToMany(mappedBy = "key.challenge", targetEntity = Submission.class, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Submission> submissions;
+
+    @Column(name = "name", length = 100, nullable = false)
+    @Size(max = 100)
+    @NotNull
+    private String name;
+
+    @Column(name = "slug", length = 50, nullable = false)
+    @Size(max = 50)
+    @NotNull
+    private String slug;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_at")
+    @CreatedDate
+    private Date createdAt;
+}
