@@ -1,0 +1,13 @@
+com\challenge\suite\SubmissionServiceTest.class
+com\challenge\SpringDmlApplicationTests.class
+com\challenge\suite\ChallengeServiceTest.class
+com\challenge\suite\AbstractTest$UserIds.class
+com\challenge\suite\AbstractTest$AccelerationIds.class
+com\challenge\suite\AbstractTest$ChallengeIds.class
+com\challenge\suite\AccelerationServiceTest.class
+com\challenge\suite\CandidateServiceTest.class
+com\challenge\suite\UserServiceTest.class
+com\challenge\suite\AbstractTest.class
+com\challenge\suite\ChallengeTestSuite.class
+com\challenge\suite\AbstractTest$CompanyIds.class
+com\challenge\suite\CompanyServiceTest.class

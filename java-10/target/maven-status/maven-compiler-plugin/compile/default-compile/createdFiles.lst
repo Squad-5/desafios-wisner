@@ -1,0 +1,6 @@
+com\challenge\repository\CompanyRepository.class
+com\challenge\repository\SubmissionRepository.class
+com\challenge\repository\AccelerationRepository.class
+com\challenge\repository\UserRepository.class
+com\challenge\repository\ChallengeRepository.class
+com\challenge\repository\CandidateRepository.class
